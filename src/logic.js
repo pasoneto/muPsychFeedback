@@ -27,6 +27,9 @@ function generateChunk(whereAppend, variables, listeningSession, convertToIcon, 
     if(convertToIcon){
       var dataShow = valueToIcon(dataShow, icons)
     }     
+    if(dataShow == ""){
+      var dataShow = "-"
+    }
     element.innerHTML = dataShow;
     line.appendChild(element);
     first.appendChild(line);
