@@ -44,11 +44,19 @@ h3{
   margin: 10px;
   width: 40%
 }
+#VariablesEnd{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
 #line{
   height: 33%
 }
-#activity, #reason, #strategy, #suitability, #success, #complete{
+#strategy, #complete{
   height: 33%
+}
+#activity, #reason, #suitability, #success{
+  height: 50%
 }
 #MusicVariables{
   width: 100%

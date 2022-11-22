@@ -39,13 +39,13 @@ const session = urlParams.get('session')
 
 generateChunk("MusicVariables", ["InitEndSong", "InitEndArtist"], session, false)
 generateChunk("Variables", ["MoodText", "ValenceText", "ArousalText"], session, false)
-generateChunk("Aim", ["ValenceAim", "ArousalAim", "MoodAim"], session, true, iconsUpDown)
+generateChunk("Aim", ["MoodAim", "ValenceAim", "ArousalAim"], session, true, iconsUpDown)
 generateChunk("Success", ["ValenceSuccess", "ArousalSuccess", "MoodSuccess"], session, true, iconsSuccessFailure)
 
-generateChunk("suitability", ["SuitableText"], session, true, iconsSuccessFailure)
-generateChunk("success", ["ReasonSuccess"], session, true, iconsSuccessFailure)
-generateChunk("complete", ["Strat2"], session, true, iconsSuccessFailure)
+generateChunk("success", ["ReasonSuccessText"], session, true, iconsSuccessFailure)
 
 generateChunk("activity", ["Activity"], session)
+generateChunk("suitability", ["SuitableText"], session, true, iconsSuccessFailure)
+
 generateChunk("reason", ["Reason"], session)
 generateChunk("strategy", ["Strat2"], session)
