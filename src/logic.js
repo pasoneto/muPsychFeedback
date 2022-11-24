@@ -39,6 +39,9 @@ function generateChunk(whereAppend, variables, listeningSession, convertToIcon, 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 var session = urlParams.get('session')
+var user = urlParams.get('user')
+
+var data = data.filter(i=>i.LongID == user)
 
 generateChunk("MusicVariables", ["InitEndSong", "InitEndArtist"], session, false)
 generateChunk("Variables", ["MoodText", "ValenceText", "ArousalText"], session, false)
@@ -76,6 +79,6 @@ function nextSession(plus){
   } else {
     var newSession = Number(window.session) - 1
   }
-  var parameters = "?" + "session=" + newSession.mod(nSessions)
+  var parameters = "?" + "session=" + newSession.mod(nSessions) + "&user=" + user
   window.location = base+parameters
 }
